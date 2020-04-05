@@ -1,0 +1,73 @@
+<h3>Заявки</h3>
+<div class="row">
+    <%# <a href="/orders/new" class="button">Добавить заявку</a> %>
+    <%# <button type="button" class="btn btn-link">Линк</button> %>
+    <a class="btn btn-link" href="/orders/new" role="button">Добавить заявку</a>
+
+    <div class="dropdown">
+      <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Удаление заявки
+      </button>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="/order/delete_f">По месту отправления</a>
+        <a class="dropdown-item" href="/order/delete_t">По месту прибытия</a>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <% @orders.each_with_index do |order, index| %>
+    <div class="col-3">
+    <br>
+    <table>
+      
+       <tr>
+          <td><strong>Номер заявки </strong></td>
+          <td><%= index + 1 %></td>
+        </tr>
+        <tr>
+          <td><strong>Идентификатор </strong></td>
+          <td><%= order.num %></td>
+        </tr>
+        <tr>  
+          <td><strong>Место отправления </strong></td>
+          <td><%= order.where_from %></td>
+        </tr>
+        <tr>
+          <td><strong>Место прибытия </strong></td>
+          <td><%= order.where_to %></td>
+        </tr>
+       
+          <td><strong>Время </strong></td>
+          <td><%= order.time %></td>
+        </tr>
+         <tr>
+          <td><strong>Дата </strong></td>
+          <td><%= order.date %></td>
+        </tr>
+        <tr>
+        <tr>
+          <td><strong>Имя </strong></td>
+          <td><%= order.name %></td>
+        </tr>
+        <tr>
+          <td><strong>Фамилия </strong></td>
+          <td><%= order.surname %></td>
+        </tr>
+      
+      </table>
+          <form action="/orders/del/<%= index %>">
+            <button type="submit" class="btn btn-secondary btn-sm">Удалить</button>
+          </form>
+
+          <form action="/orders/search/<%= index %>">
+            <button type="submit" class="btn btn-secondary btn-sm">Найти подходящие рейсы</button>
+          </form>
+
+
+    </div>
+    <% end %>
+  </div>
+</div>

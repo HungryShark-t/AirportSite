@@ -1,0 +1,11 @@
+[Unit]
+Description = The simplest ruby applicaiton 
+
+[Service]
+Environment = PATH=<%= path %>
+WorkingDirectory =<%= application_directory %>
+Type = simple
+ExecStart =<%= bundle_path %> exec ruby app.rb
+
+[Install]
+WantedBy = multi-user.target 

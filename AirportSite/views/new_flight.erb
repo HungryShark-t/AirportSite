@@ -1,0 +1,93 @@
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <h3>
+      Введите данные для добавления нового рейса
+    </h3>
+  </div>
+  <% if @errors && !@errors.empty? %>
+    <div class="large-12 cell">
+      <h4>Ошибка ввода данных</h4>
+    </div>
+    <% @errors.each do |error|%>
+      <div class="large-12 cell callout alert">
+        <%= error%>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<form action="/flights/new" method="post">
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Номер рейса
+        <input type="number" placeholder="1488" name="number" value="<%= @number || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Город отправления
+        <input type="text" placeholder="Москва" name="where_from" value="<%= @where_from || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Город прибытия
+        <input type="text" placeholder="Анапа" name="where_to" value="<%= @where_to || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Время отправления
+        <input type="time" name="time_from" value="<%= @time_from || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Дата отправления
+        <input type="date" name="date_from" value="<%= @date_from || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Время прибытия
+        <input type="time" name="time_to" value="<%= @time_to || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Дата прибытия
+        <input type="date" name="date_to" value="<%= @date_to || '' %>">
+      </label>
+    </div>
+  </div>
+<div class="form-group">
+    <label for="type">Тип самолета
+    <select multiple class="form-control" name="type"  id="type">
+      <option>Ту-134</option>
+      <option>Ту-154</option>
+      <option>Ту-114</option>
+      <option>ИЛ-64</option>
+    </select>
+    </label>
+  </div>
+  
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Цена
+        <input type="number" placeholder="4500" name="cost" value="<%= @cost || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="lagre-12 cell">
+       <button type="submit" class="btn btn-secondary">Добавить</button>
+      
+    </div>
+  </div>
+</form>

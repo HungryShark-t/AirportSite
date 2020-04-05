@@ -1,0 +1,46 @@
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <h4>Результаты поиска</h4>
+  </div>
+</div>
+<br>
+<% unless @flights.each.to_a.empty? %>
+ <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Номер</th>
+      <th scope="col">Место отправления</th>
+      <th scope="col">Место прибытия</th>
+      <th scope="col">Время отправления</th>
+      <th scope="col">Время прибытия</th>
+      <th scope="col">Дата отправления</th>
+      <th scope="col">Дата прибытия</th>
+      <th scope="col">Тип самолета</th>
+      <th scope="col">Цена</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+ <% @flights.each do |flight| %>
+   <tr>
+      <td><%= flight.number %></td>
+      <td><%= flight.where_from %></td>
+      <td><%= flight.where_to %></td>
+      <td><%= flight.time_from %></td>
+      <td><%= flight.time_to %></td>
+      <td><%= flight.date_from %></td>
+      <td><%= flight.date_to %></td>
+      <td><%= flight.type %></td>
+      <td><%= flight.cost %></td>
+   </tr>
+  <% end %>
+  </tbody>
+</table>
+<% else %>
+  <p>Поиск не дал результатов</p>
+<% end %>
+<div class="grid-x">
+    <div class="lagre-12 cell">
+        <a href="/index" class="btn btn-secondary"> Вернуться к списку</a>
+    </div>
+</div>

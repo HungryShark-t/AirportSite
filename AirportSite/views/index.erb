@@ -1,0 +1,67 @@
+<h3>Рейсы</h3>
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <a href="/flights/new" class="button">Добавить рейс</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <% @flights.each_with_index do |flight, index| %>
+    <div class="col-3">
+    <br>
+    <table>
+      
+       <tr>
+          <td><strong>Номер самолета </strong></td>
+          <td><%= index + 1 %></td>
+        </tr>
+        <tr>
+          <td><strong>Номер рейса </strong></td>
+          <td><%= flight.number %></td>
+        </tr>
+        <tr>  
+          <td><strong>Место отправления </strong></td>
+          <td><%= flight.where_from %></td>
+        </tr>
+        <tr>
+          <td><strong>Место прибытия </strong></td>
+          <td><%= flight.where_to %></td>
+        </tr>
+        <tr>
+          <td><strong>Дата отправления </strong></td>
+          <td><%= flight.date_from %></td>
+        </tr>
+        <tr>
+          <td><strong>Время отправления </strong></td>
+          <td><%= flight.time_from %></td>
+        </tr>
+        <tr>
+          <td><strong>Дата прибытия </strong></td>
+          <td><%= flight.date_to %></td>
+        </tr>
+        <tr>
+          <td><strong>Время прибытия </strong></td>
+          <td><%= flight.time_to %></td>
+        </tr>
+        <tr>
+          <td><strong>Тип самолета </strong></td>
+          <td><%= flight.type %></td>
+        </tr>
+        <tr>
+          <td><strong>Цена </strong></td>
+          <td><%= flight.cost %></td>
+        </tr>
+      
+      </table>
+        <div class="col">
+          <form action="/flights/del/<%= index %>">
+            <button type="submit" class="btn btn-secondary btn-sm">Удалить</button>
+          </form>
+        </div>
+
+    </div>
+    <% end %>
+  </div>
+</div>
+ 

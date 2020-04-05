@@ -1,0 +1,42 @@
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <h3>Результаты поиска</h3>
+  </div>
+</div>
+
+<% unless @orders.each.to_a.empty? %>
+ <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Номер</th>
+      <th scope="col">Место отправления</th>
+      <th scope="col">Место прибытия</th>
+      <th scope="col">Время </th>
+      <th scope="col">Дата </th>
+      <th scope="col">Имя</th>
+      <th scope="col">Фамилия</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+ <% @orders.each do |order| %>
+   <tr>
+      <td><%= order.num %></td>
+      <td><%= order.where_from %></td>
+      <td><%= order.where_to %></td>
+      <td><%= order.time %></td>
+      <td><%= order.date %></td>
+      <td><%= order.name %></td>
+      <td><%= order.surname %></td>
+   </tr>
+   <% end %>
+  </tbody>
+</table>
+<% else %>
+  <p>Поиск не дал результатов</p>
+<% end %>
+<div class="grid-x">
+    <div class="lagre-12 cell">
+        <a href="/index_or" class="btn btn-secondary"> Вернуться к списку</a>
+    </div>
+</div>

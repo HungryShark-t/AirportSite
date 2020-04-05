@@ -1,0 +1,74 @@
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <h3>
+      Введите данные для добавления новой заявки
+    </h3>
+  </div>
+  <% if @errors && !@errors.empty? %>
+    <div class="large-12 cell">
+      <h4>Ошибка ввода данных</h4>
+    </div>
+    <% @errors.each do |error|%>
+      <div class="large-12 cell callout alert">
+        <%= error%>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<form action="/orders/new" method="post">
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Идентификатор
+        <input type="number" placeholder="1488" name="num" value="<%= @num || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Город отправления
+        <input type="text" placeholder="Москва" name="where_from" value="<%= @where_from || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Город прибытия
+        <input type="text" placeholder="Анапа" name="where_to" value="<%= @where_to || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Время 
+        <input type="time" name="time" value="<%= @time || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Дата 
+        <input type="date" name="date" value="<%= @date || '' %>">
+      </label>
+    </div>
+  </div>
+ <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Имя
+        <input type="text" placeholder="Введите имя" name="name" value="<%= @name || '' %>">
+      </label>
+    </div>
+  </div>
+ <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Фамилия
+        <input type="text" placeholder="Введите фамилию" name="surname" value="<%= @surname || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="lagre-12 cell">
+       <button type="submit" class="btn btn-secondary">Добавить</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,23 @@
+example_id                                          | status | run_time        |
+--------------------------------------------------- | ------ | --------------- |
+./spec/all_tests/add_flight_spec.rb[1:1]            | passed | 0.19338 seconds |
+./spec/all_tests/add_order_spec.rb[1:1]             | passed | 0.12349 seconds |
+./spec/all_tests/delete_where_spec.rb[1:1]          | passed | 0.0378 seconds  |
+./spec/all_tests/delete_where_spec.rb[1:2]          | passed | 0.03783 seconds |
+./spec/all_tests/deleting_flight_spec.rb[1:1]       | passed | 0.12597 seconds |
+./spec/all_tests/deleting_orders_spec.rb[1:1]       | passed | 0.05882 seconds |
+./spec/all_tests/errors_add_flight_spec.rb[1:1]     | passed | 0.02854 seconds |
+./spec/all_tests/errors_add_order_spec.rb[1:1]      | passed | 0.03147 seconds |
+./spec/all_tests/errors_route_spec.rb[1:1]          | passed | 0.39188 seconds |
+./spec/all_tests/errors_scan_date_spec.rb[1:1]      | passed | 0.01586 seconds |
+./spec/all_tests/errors_scan_date_time_spec.rb[1:1] | passed | 0.01285 seconds |
+./spec/all_tests/find_flights_spec.rb[1:1]          | passed | 0.04397 seconds |
+./spec/all_tests/find_orders_spec.rb[1:1]           | passed | 0.03766 seconds |
+./spec/all_tests/page_spec.rb[1:1]                  | passed | 0.00839 seconds |
+./spec/all_tests/page_spec.rb[1:2]                  | passed | 0.02292 seconds |
+./spec/all_tests/page_spec.rb[1:3]                  | passed | 0.03039 seconds |
+./spec/all_tests/page_spec.rb[1:4]                  | passed | 0.01106 seconds |
+./spec/all_tests/page_spec.rb[1:5]                  | passed | 0.01474 seconds |
+./spec/all_tests/page_spec.rb[1:6]                  | passed | 0.00992 seconds |
+./spec/all_tests/route_spec.rb[1:1]                 | passed | 0.09238 seconds |
+./spec/all_tests/scan_flights_spec.rb[1:1]          | passed | 0.03813 seconds |

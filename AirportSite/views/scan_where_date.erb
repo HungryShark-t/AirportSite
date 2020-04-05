@@ -1,0 +1,46 @@
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <h3>
+      Введите данные для поиска
+    </h3>
+  </div>
+  <% if @errors && !@errors.empty? %>
+    <div class="large-12 cell">
+      <h4>Ошибка ввода данных</h4>
+    </div>
+    <% @errors.each do |error|%>
+      <div class="large-12 cell callout alert">
+        <%= error%>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<form action="/select/scan_where_date" method="post">
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Город отправления
+        <input type="text" placeholder="Москва" name="where_from" value="<%= @where_from || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Город прибытия
+        <input type="text" placeholder="Анапа" name="where_to" value="<%= @where_to || '' %>">
+      </label>
+    </div>
+  </div>
+   <div class="grid-x">
+    <div class="large-6 cell">
+      <label>Дата отправления
+        <input type="date" name="date_from" value="<%= @date_from || '' %>">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="lagre-12 cell">
+       <button type="submit" class="btn btn-secondary">Найти</button>
+    </div>
+  </div>
+</form>

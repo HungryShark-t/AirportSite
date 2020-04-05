@@ -1,0 +1,58 @@
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <h3>Результаты поиска</h3>
+  </div>
+</div>
+
+<% unless @flights.empty? %>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Номер</th>
+      <th scope="col">Место отправления</th>
+      <th scope="col">Место прибытия</th>
+      <th scope="col">Время отправления</th>
+      <th scope="col">Время прибытия</th>
+      <th scope="col">Дата отправления</th>
+      <th scope="col">Дата прибытия</th>
+      <th scope="col">Тип самолета</th>
+      <th scope="col">Цена</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+ <% @flights.each do |flight| %>
+   <tr>
+      <td><%= flight[0].number %></td>
+      <td><%= flight[0].where_from %></td>
+      <td><%= flight[0].where_to %></td>
+      <td><%= flight[0].time_from %></td>
+      <td><%= flight[0].time_to %></td>
+      <td><%= flight[0].date_from %></td>
+      <td><%= flight[0].date_to %></td>
+      <td><%= flight[0].type %></td>
+      <td><%= flight[0].cost %></td>
+   </tr>
+   <tr>
+      <td><%= flight[1].number %></td>
+      <td><%= flight[1].where_from %></td>
+      <td><%= flight[1].where_to %></td>
+      <td><%= flight[1].time_from %></td>
+      <td><%= flight[1].time_to %></td>
+      <td><%= flight[1].date_from %></td>
+      <td><%= flight[1].date_to %></td>
+      <td><%= flight[1].type %></td>
+      <td><%= flight[1].cost %></td>
+   </tr>
+  <% end %>
+  </tbody>
+</table>
+<% else %>
+  <p>Поиск не дал результатов</p>
+<% end %>
+<div class="grid-x">
+    <div class="lagre-12 cell">
+        <a href="/index" class="btn btn-secondary"> Вернуться к списку</a>
+    </div>
+</div>
+

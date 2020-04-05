@@ -1,0 +1,60 @@
+Number: 2312
+Where from: Сочи
+Where to: Адлер
+Time from: 23:00
+Time to: 03:30
+Date from: 2019-04-11
+Date to: 2019-06-11
+Type: Ту-134
+Cost: 1300
+
+Number: 8989
+Where from: Москва
+Where to: Шарья
+Time from: 20:44
+Time to: 08:55
+Date from: 2019-04-10
+Date to: 2019-05-23
+Type: Ту-114
+Cost: 7436
+
+Number: 7278
+Where from: Владивосток
+Where to: Мурманск
+Time from: 00:45
+Time to: 10:35
+Date from: 2019-06-15
+Date to: 2019-06-15
+Type: Ту-154
+Cost: 6574
+
+Number: 24
+Where from: Москва
+Where to: Шарья
+Time from: 08:50
+Time to: 14:15
+Date from: 2019-04-13
+Date to: 2019-06-17
+Type: ИЛ-64
+Cost: 453
+
+Number: 678
+Where from: Мурманск
+Where to: Шарья
+Time from: 08:50
+Time to: 14:15
+Date from: 2019-06-15
+Date to: 2019-06-18
+Type: ИЛ-64
+Cost: 12355
+
+Number: 783
+Where from: Шарья
+Where to: Киров
+Time from: 16:33
+Time to: 17:59
+Date from: 2019-06-15
+Date to: 2019-06-18
+Type: ИЛ-64
+Cost: 45688
+

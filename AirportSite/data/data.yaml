@@ -1,0 +1,99 @@
+flight:
+  - number: 2312                  
+    where_from: Сочи
+    where_to: Адлер
+    time_from: "23:00"
+    time_to: "03:30"
+    date_from: "2019-04-11"
+    date_to: "2019-06-11" 
+    type: "Ту-134"
+    cost: 1300
+  - number: 8989                 
+    where_from: Москва
+    where_to: Шарья
+    time_from: "20:44"
+    time_to: "08:55"
+    date_from: "2019-04-10"
+    date_to: "2019-05-23"
+    type: "Ту-114"
+    cost: 7436
+  - number: 7278                 
+    where_from: Владивосток
+    where_to: Мурманск
+    time_from: "00:45"
+    time_to: "10:35"
+    date_from: "2019-06-15"
+    date_to: "2019-06-15"
+    type: "Ту-154"
+    cost: 6574
+  - number: 24                   
+    where_from: Москва
+    where_to: Шарья
+    time_from: "08:50"
+    time_to: "14:15"
+    date_from: "2019-04-13"
+    date_to: "2019-06-17"
+    type: "ИЛ-64"
+    cost: 453
+  - number: 678                  
+    where_from: Мурманск
+    where_to: Шарья
+    time_from: "08:50"
+    time_to: "14:15"
+    date_from: "2019-06-15"
+    date_to: "2019-06-18"
+    type: "ИЛ-64"
+    cost: 12355
+  - number: 783                  
+    where_from: Шарья
+    where_to: Киров
+    time_from: "16:33"
+    time_to: "17:59"
+    date_from: "2019-06-15"
+    date_to: "2019-06-18"
+    type: "ИЛ-64"
+    cost: 45688
+
+order:
+  - num: 24                   
+    where_from: Шарья
+    where_to: Киров
+    time: "13:24"
+    date: "2019-06-17"
+    name: Артем
+    surname: Червяков
+  - num: 5                  
+    where_from: Москва
+    where_to: Шарья
+    time: "16:56"
+    date: "2019-04-11"
+    name: Дмитрий
+    surname: Таширев
+  - num: 38                  
+    where_from: Вологда
+    where_to: Ярославль
+    time: "08:00"
+    date: "2019-05-31"
+    name: Никита
+    surname: Торопов
+  - num: 44                   
+    where_from: Москва
+    where_to: Самара
+    time: "08:50"
+    date: "2019-05-31"
+    name: Михаил
+    surname: Тицын
+  - num: 456                  
+    where_from: Орел
+    where_to: Краснодар
+    time: "10:00"
+    date: "2019-02-02"
+    name: Вася
+    surname: Петров
+  - num: 404                   
+    where_from: Буй
+    where_to: Мантурово
+    time: "23:59"
+    date: "2019-03-08"
+    name: Настя
+    surname: Кощеева
